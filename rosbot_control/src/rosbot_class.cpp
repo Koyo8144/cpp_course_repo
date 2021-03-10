@@ -83,7 +83,7 @@ void RosbotClass::move_backwards(int time) {
   while (ros::Time::now() - start_time < timeout) {
     ROS_INFO_STREAM("Moving backwards ........... ");
     ros::spinOnce();
-    vel_msg.linear.x = 0.5;
+    vel_msg.linear.x = -0.5;
     vel_msg.angular.z = 0.0;
     vel_pub.publish(vel_msg);
     rate.sleep();
