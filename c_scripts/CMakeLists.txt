@@ -25,6 +25,11 @@ include_directories(
 )
 
 
+set(csname unit1_exercise)
+add_executable(${csname} src/${csname}.cpp)
+add_dependencies(${csname} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(${csname} ${catkin_LIBRARIES})
+
 set(csname unit2_exercise)
 add_executable(${csname} src/${csname}.cpp)
 add_dependencies(${csname} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
@@ -46,11 +51,6 @@ add_dependencies(${csname} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED
 target_link_libraries(${csname} ${catkin_LIBRARIES})
 
 set(csname unit6_exercise)
-add_executable(${csname} src/${csname}.cpp)
-add_dependencies(${csname} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(${csname} ${catkin_LIBRARIES})
-
-set(csname unit7_exercise)
 add_executable(${csname} src/${csname}.cpp)
 add_dependencies(${csname} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(${csname} ${catkin_LIBRARIES})
