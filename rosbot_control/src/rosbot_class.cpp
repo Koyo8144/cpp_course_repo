@@ -23,6 +23,7 @@ RosbotClass::RosbotClass() {
   odom_sub = n.subscribe(odom_topic, 10, &RosbotClass::odom_callback, this);
   ROS_INFO("Initializing node .................................");
   usleep(2000000);
+  ros::spinOnce();
 }
 
 void RosbotClass::laser_callback(
