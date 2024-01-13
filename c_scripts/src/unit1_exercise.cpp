@@ -12,6 +12,18 @@ from the ros package, we import this library
 to make use of the classes and functions that ROS provides.
 */
 #include <ros/ros.h>
+
+/*
+In C++ there are multiple ways to implement a print, but in this chapter we have seen two of them:
+printf
+cout
+The first one is a function that needs the type of the variable to be printed. For example, if we want to print an integer, we specify it with the symbol %i, if it's a float with %f, and if it's a string with %s. In the particular case of printing a string, it needs to be converted to a character by the function c_str().
+Finally, it also needs to be accompanied by the include of the class iostream.
+The second one is an object that refers to Character OUTput (COUT), which needs to be accompanied by the include of the class iostream, the importing of namespace std (we'll see what this means later), and the symbol <<.
+It can also be accompanied by the command endl to jump a line at that point:
+*/
+#include <iostream>
+
 /*
 Note that when including header files, we use " " (quotes) or < > (angle bracket) syntax. 
 Using <> tells the preprocessor to search the usual location for system headers 
@@ -24,6 +36,22 @@ This line means that we can use the code in the std namespace
 without typing std:: before it. For example, 
 we can write cout instead of std::cout. We will explai it more 
 in detail later in 1.5.3 Namespace.
+*/
+/*
+C++ has a particular feature called namespaces. 
+They allow us to group named entities into a single scope. 
+That way, they will only have a meaning inside that namespace. 
+Also, we can repeat names of variables, but always inside different 
+namespaces.
+*/
+/*
+This line allows us to use all the names inside the namespace std, which so far have been:
+
+string
+cout
+cin
+endl
+From now on, if we need to use these, we'll add the line of "using namespace std".
 */
 using namespace std;
 
